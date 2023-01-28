@@ -1,0 +1,20 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- bg y navbar me sirven para cambiarle el color a la barra de navegacion -->
+    <div class="container"> <!-- container me sirve para poder cambiar los inconos dentro del navbar (puedo colocarle container-fluid para q vaya hacia un lado)-->
+      <a class="navbar-brand" href="/">Grafotec</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- aca al ul le estoy agregando un margin -->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog:posts' %}">Blog</a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <a class="btn btn-primary btn-sm" href="{% static 'portfolio/certificado.pdf'%}" target="_blank">Download CV</a> <!--la etiqueta target sirve para abrir enlaces en una siguiente pestaña-->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
